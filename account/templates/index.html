@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorting URL</title>
+</head>
+<body>
+     <form method="post">
+         {% csrf_token %}
+         <input type="url" name="base_url" id="url_input">
+         <input type="submit" value="Submit">
+     </form>
+    
+   <!-- <input type="url" name="base_url" id="url_input">
+    <button onclick="handleRedirect()">sdasdubmit</button>
+    <script>
+        const inputvalue = document.getElementById("url_input");
+        function handleRedirect() {
+            fetch('http://127.0.0.1:8000', {
+                method: "POST",
+                 headers: {
+                  'Content-Type': 'application/json',
+                  'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify({base_url: inputvalue.value})
+            })
+            .then(resp => {
+               if(resp.ok) {
+                    console.log('Okay')
+               }
+               return resp.json()
+            })
+            .then(data => {
+                console.log(data)
+            })
+        }
+    </script> -->
+</body>
+</html>

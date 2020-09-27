@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    <a href="{% url 'home' %}"> Home</a>
+    <h2>Base url: <br>{{detail_url.base_url}}</h2>
+    <h3>Short url: <br>{{detail_url.short_url}}</h3>
+    <h3>Username: <br>{{detail_url.user.username}}</h3>
+    <h3>Email: <br>{{detail_url.user.email}}</h3>
+    <h3>Count: {{detail_url.count}}</h3>
+</body>
+</html>
